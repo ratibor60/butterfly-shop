@@ -1,0 +1,28 @@
+.main-nav {
+  margin-left: auto;
+}
+
+.main-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-left: 30px;
+  padding: 0 25px;
+}
+
+a {
+  display: block;
+  padding: 5px 0;
+  font-family: $font-open;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-light;
+  text-decoration: none;
+}
+
+

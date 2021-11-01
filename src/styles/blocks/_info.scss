@@ -1,0 +1,25 @@
+.info {
+  padding-top: 200px;
+  padding-bottom: 214px;
+  background-image: url(..//img/promo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba($color-dark, .4);
+}
+
+.info-inner {
+  @include container;
+}
+
+.info-content {
+  text-align: center;
+}
+
+.info-title {
+  margin-bottom: 100px;
+  font-family: $font-open;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 98px;
+  color: $color-light;
+}
