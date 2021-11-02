@@ -1,0 +1,42 @@
+.footer {
+  background-color: $color-dark;
+}
+
+.footer-inner {
+  @include container;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone {
+  margin-left: 703px;
+  font-family: $font-open;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.social {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-item {
+  padding: 0;
+  margin-left: 15px;
+}
+
+.social-link {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
