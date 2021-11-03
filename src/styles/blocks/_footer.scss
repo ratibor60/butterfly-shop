@@ -1,4 +1,5 @@
 .footer {
+  padding: 31px 0;
   background-color: $color-dark;
 }
 
@@ -8,16 +9,19 @@
 
 .footer-wrap {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
 .phone {
+  padding: 0;
   margin-left: 703px;
+  margin-right: 60px;
   font-family: $font-open;
   font-weight: 400;
   font-size: 28px;
   line-height: 38px;
+
 }
 
 .social {
@@ -25,6 +29,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  & li:first-child {
+    margin-left: 0;
+  }
 }
 
 .social-item {
