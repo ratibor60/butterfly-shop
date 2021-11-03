@@ -16,7 +16,6 @@
 }
 
 .portfolio-list {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -26,6 +25,7 @@
 }
 
 .portfolio-list li {
+  position: relative;
   flex-basis: 23%;
   padding: 0;
   margin: 0;
@@ -37,9 +37,15 @@
 }
 
 .portfolio-list span {
-  font-family: Open Sans;
+  position: absolute;
+  right: 18%;
+  bottom: 5px;
+  font-family: $font-open;
   font-weight: 400;
   font-size: 24px;
   line-height: 33px;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: $color-light;
  }
+
+
