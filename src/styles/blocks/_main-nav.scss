@@ -1,5 +1,14 @@
 .main-nav {
   margin-left: auto;
+
+  @media (max-width: $df-mobile) {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-dark;
+  }
 }
 
 .main-list {
@@ -8,8 +17,18 @@
   padding: 0;
   list-style: none;
 
+  @media (max-width: $df-mobile) {
+    display: block;
+    text-align: center;
+  }
+
 & a {
   padding: 33px 25px;
+
+  @media (max-width: $df-mobile) {
+    padding: 8px 25px;
+  }
+
 }
 
 & a:hover {

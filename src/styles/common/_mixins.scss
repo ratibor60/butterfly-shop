@@ -1,7 +1,7 @@
 @mixin container($width: 1276px) {
-  max-width: $width;
+  max-width: $width + $indent-gap;
   margin: 0 auto;
-  border: 1px solid #000;
+  // border: 1px solid #000;
 }
 
 @mixin title-h2 {
@@ -12,4 +12,14 @@
   line-height: 87px;
   text-align: center;
   color: $color-dark;
+
+  @media (max-width: $df-tablet) {
+    font-size: 60px;
+    line-height: 82px;
+  }
+
+  @media (max-width: $df-mobile) {
+    font-size: 36px;
+    line-height: 49px;
+  }
 }
