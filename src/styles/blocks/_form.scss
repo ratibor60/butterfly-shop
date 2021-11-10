@@ -1,9 +1,19 @@
 .form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .form-field {
   flex-basis: 33.33%;
+
+  @media (max-width: $df-tablet) {
+    flex-basis: 49.5%;
+  }
+
+  @media (max-width: $df-mobile) {
+    flex-basis: 99%;
+  }
 }
 
 .form-label {
@@ -18,4 +28,11 @@
   line-height: 34px;
   border-radius: 6px;
   border: none;
+
+  @media (max-width: $df-tablet) {
+    padding: 35px 15px;
+  }
+
+  @media (max-width: $df-mobile) {
+  }
 }
