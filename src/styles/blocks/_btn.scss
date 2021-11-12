@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  // min-width: 250px;
+  min-width: 250px;
   padding: 30px 36px 31px 48px;
   font-family: $font-open;
   font-weight: 400;
@@ -13,14 +13,13 @@
 
   @media (max-width: $df-mobile) {
     padding: 20px 14px;
-    margin-top: 80px;
     font-size: 24px;
     line-height: 33px;
   }
 }
 
 .btn-form {
-  margin-top: 27px;
+  margin-top: 34px;
   padding: 34px 36px;
   width: 100%;
   font-size: 28px;
@@ -28,11 +27,8 @@
 
   @media (max-width: $df-tablet) {
     display: block;
-    margin-top: 40px;
-    max-width: 100%;
-
+    padding: 34px auto;
+    width: 100%;
   }
 
-  @media (max-width: $df-mobile) {
-  }
 }
