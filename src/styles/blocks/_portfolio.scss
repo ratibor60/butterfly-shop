@@ -26,10 +26,11 @@
 .portfolio-item  {
   position: relative;
   flex-basis: 23.5%;
+  margin-bottom: 20px;
 
   @media (max-width: $df-tablet) {
     flex-basis: 49%;
-    margin-bottom: $indent-half-gap;
+    margin-bottom: 20px;
   }
 
   @media (max-width: $df-mobile) {
