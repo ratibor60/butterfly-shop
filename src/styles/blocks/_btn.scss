@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  min-width: 250px;
+  width: 497px;
   padding: 30px 36px 31px 48px;
   font-family: $font-open;
   font-weight: 400;
@@ -18,8 +18,8 @@
   }
 }
 
+
 .btn-form {
-  margin-top: 34px;
   padding: 35px 30px;
   width: 100%;
   font-size: 28px;
@@ -27,7 +27,8 @@
 
   @media (max-width: $df-tablet) {
     display: block;
-    width: 100%;
+    margin-top: 34px;
+    min-width: 100%;
   }
 
 }
