@@ -1,0 +1,85 @@
+.contacts {
+  padding-top: 230px;
+  padding-bottom: 130px;
+}
+
+.contacts-inner {
+  @include container;
+}
+
+.contacts-title {
+  @include title-h2;
+  margin-bottom: 77px;
+
+  @media (max-width: $df-tablet) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $df-mobile) {
+    margin-bottom: 50px;
+  }
+}
+
+.contacts-tabs {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 40px;
+  list-style: none;
+
+  @media (max-width: $df-mobile) {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts-tab {
+  margin: 0 25px;
+}
+
+.contacts-tab-link {
+  font-family: $font-open;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $color-dark;
+
+  &.active {
+    color: $color-accent;
+  }
+}
+
+.contacts-content {
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.contacts-info {
+  flex-basis: 33.33%;
+  margin-left: 8.33%;
+
+  & p {
+    font-family: $font-open;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  @media (max-width: $df-tablet) {
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @media (max-width: $df-mobile) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.contacts-map {
+  flex-basis: 58.33%;
+}

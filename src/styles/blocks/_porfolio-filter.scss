@@ -1,9 +1,18 @@
-.porfolio-filter {
-  @include container;
-  margin: 0 auto;
+.contacts-title {
+  @include title-h2;
+
+  @media (max-width: $df-tablet) {
+    font-size: 60px;
+    line-height: 82px;
+  }
+
+  @media (max-width: $df-mobile) {
+    font-size: 36px;
+    line-height: 49px;
+  }
 }
 
-.filter-list {
+.portfolio-filter {
   display: flex;
   justify-content: center;
   padding: 0;
@@ -12,8 +21,12 @@
   list-style: none;
 }
 
+.filter-item {
+  margin: 0 25px;
+}
+
 .filter-link {
-  padding: 10px 25px;
+  padding: 5px 0;
   font-family: $font-open;
   font-weight: 600;
   font-size: 22px;
@@ -21,8 +34,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $color-dark;
+
+  &.active {
+    color: $color-accent;
+  }
 }
 
-.active {
-  color: $color-accent;
-}
+
