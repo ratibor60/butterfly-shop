@@ -7,6 +7,10 @@
   background-size: cover;
   background-position: 50% 50%;
   background-color: rgba($color-dark, .4);
+
+  @media (max-width: $df-mobile) {
+    margin-top: 56px;
+  }
 }
 
 .info-inner {
