@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
-//бургер
+  //бургер
   $('.burger').on('click', function () {
     $('.main-nav').slideToggle();
   });
 
-//табы
+  //табы
   $('.contacts-tab-link').on('click', function (event) {
     event.preventDefault();
 
@@ -18,8 +18,8 @@ $(document).ready(function () {
     $('.contacts-content').eq(index).addClass('active');
   });
 
-//фильтры
-  $('.filter-link').on('click', function(event) {
+  //фильтры
+  $('.filter-link').on('click', function (event) {
     event.preventDefault();
 
     let linkType = $(this).data('type');
@@ -32,7 +32,7 @@ $(document).ready(function () {
       return;
     }
 
-    $('.portfolio-item').each (function() {
+    $('.portfolio-item').each(function () {
       let portfolioType = $(this).data('type');
 
       if (linkType === portfolioType) {
@@ -44,9 +44,9 @@ $(document).ready(function () {
   });
 
 
-// аккордеон
+  // аккордеон
   let prevIndex;
-  $('.faq-button').on('click', function() {
+  $('.faq-button').on('click', function () {
     let currentIndex = $(this).index('.faq-button');
 
     if (currentIndex === prevIndex) {
@@ -66,5 +66,29 @@ $(document).ready(function () {
 
   //слайдер
   $('.carousel').slick();
+
+
+  //ajax
+  $('.js-btn-portfolio').on('click', function () {
+
+    $.ajax({
+      type: 'POST',
+      url: '../json/portfolio.json',
+      data: 'count=2',
+      success: function (resData) {
+        let html = generateHtml(resData.portfolio);
+        addToPage(html);
+
+      },
+      error: function () {
+        console.log('Ошибочка');
+      }
+    });
+  });
+
+  function generateHtml(dateArray) {
+    let htmlString = '';
+  }
+
 
 });

@@ -1,0 +1,65 @@
+{
+  "isShowMore": true,
+  "portfolio": [
+    {
+      "imageSrc": "./img/portfolio-item1.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item2.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item3.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item4.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item5.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item6.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item7.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item8.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item9.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item2.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item10.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    },
+    {
+      "imageSrc": "./img/portfolio-item11.png",
+      "imageAlt": "Бабочка такая",
+      "imageText": "Бабочка такая"
+    }
+  ]
+}

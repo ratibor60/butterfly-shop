@@ -12,13 +12,15 @@
   margin-bottom: 80px;
 }
 
-.reviews {
+
+.review {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .review-ava {
+  flex-basis: 40%;
   max-width: 304px;
   max-height: 304px;
 }
@@ -30,8 +32,8 @@
 }
 
 .review-content {
-  width: 35.5%;
-  margin-left: 24px;
+  flex-basis: 40%;
+  margin-left: 20px;
 }
 
 .review-name {
