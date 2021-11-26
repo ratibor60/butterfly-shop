@@ -86,9 +86,26 @@ $(document).ready(function () {
     });
   });
 
-  function generateHtml(dateArray) {
+  function generateHtml(dataArray) {
     let htmlString = '';
+
+    dataArray.forEach(function (itemArray) {
+      htmlString = htmlString + `<div class="portfolio-item">
+      <div class="portfolio-item" data-type="strict">
+      <img src="${itemArray.imageSrc}" alt="${itemArray.imageAlt}">
+      <span>${itemArray.imageText}</span>
+    </div>
+      </div>`;
+    });
+
+    return htmlString;
   }
+
+  function addToPage(htmlString) {
+    $('.portfolio-list').append(htmlString);
+  }
+
+
 
 
 });
