@@ -13,16 +13,17 @@
 }
 
 
-.review {
+.reviews-item {
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  @media (max-width: $df-mobile) {
+    flex-direction: column;
+  }
 }
 
 .review-ava {
-  flex-basis: 40%;
-  max-width: 304px;
-  max-height: 304px;
+  flex-basis: 30%;
 }
 
 .review-pic {
@@ -32,13 +33,23 @@
 }
 
 .review-content {
-  flex-basis: 50%;
+  flex-basis: 40%;
   margin-left: 20px;
 }
 
 .review-name {
   font-size: 48px;
   line-height: 65px;
+
+  @media (max-width: $df-tablet) {
+    font-size: 36px;
+    line-height: 49px;
+  }
+
+  @media (max-width: $df-mobile) {
+    font-size: 24px;
+    line-height: 33px;
+  }
 }
 
 .review-quote {
@@ -48,6 +59,17 @@
   font-size: 24px;
   line-height: 33px;
   color: $color-dark;
+
+  @media (max-width: $df-tablet) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @media (max-width: $df-mobile) {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 
