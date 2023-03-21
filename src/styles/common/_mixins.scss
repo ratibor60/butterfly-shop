@@ -1,7 +1,7 @@
 @mixin container($width: 1276px) {
   max-width: $width + $indent-gap;
   margin: 0 auto;
-  // border: 1px solid #000;
+  padding: 0 $indent-half-gap;
 }
 
 @mixin title-h2 {

@@ -3,7 +3,7 @@
 
   @media (max-width: $df-mobile) {
     position: absolute;
-    display: block;
+    display: none;
     top: 100%;
     left: 0;
     width: 100%;
@@ -45,6 +45,10 @@ a {
   line-height: 24px;
   color: $color-light;
   text-decoration: none;
+}
+
+.current {
+  background-color: $color-accent;
 }
 
 

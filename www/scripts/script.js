@@ -1,39 +1,38 @@
 $(document).ready(function () {
-
   //бургер
-  $('.burger').on('click', function () {
-    $('.main-nav').slideToggle();
+  $(".burger").on("click", function () {
+    $(".main-nav").slideToggle();
   });
 
   //табы
-  $('.contacts-tab-link').on('click', function (event) {
+  $(".contacts-tab-link").on("click", function (event) {
     event.preventDefault();
 
-    let index = $(this).index('.contacts-tab-link');
+    let index = $(this).index(".contacts-tab-link");
 
-    $('.contacts-tab-link').removeClass('active');
-    $(this).addClass('active');
+    $(".contacts-tab-link").removeClass("active");
+    $(this).addClass("active");
 
-    $('.contacts-content').removeClass('active');
-    $('.contacts-content').eq(index).addClass('active');
+    $(".contacts-content").removeClass("active");
+    $(".contacts-content").eq(index).addClass("active");
   });
 
   //фильтры
-  $('.filter-link').on('click', function (event) {
+  $(".filter-link").on("click", function (event) {
     event.preventDefault();
 
-    let linkType = $(this).data('type');
+    let linkType = $(this).data("type");
 
-    $('.filter-link').removeClass('active');
-    $(this).addClass('active');
+    $(".filter-link").removeClass("active");
+    $(this).addClass("active");
 
-    if (linkType === 'all') {
-      $('.portfolio-item').show();
+    if (linkType === "all") {
+      $(".portfolio-item").show();
       return;
     }
 
-    $('.portfolio-item').each(function () {
-      let portfolioType = $(this).data('type');
+    $(".portfolio-item").each(function () {
+      let portfolioType = $(this).data("type");
 
       if (linkType === portfolioType) {
         $(this).show();
@@ -43,54 +42,53 @@ $(document).ready(function () {
     });
   });
 
-
   // аккордеон
   let prevIndex;
-  $('.faq-button').on('click', function () {
-    let currentIndex = $(this).index('.faq-button');
+  $(".faq-button").on("click", function () {
+    let currentIndex = $(this).index(".faq-button");
 
     if (currentIndex === prevIndex) {
       $(this).next().slideToggle();
-      $(this).toggleClass('open');
+      $(this).toggleClass("open");
       return;
     }
 
     $(this).next().slideDown();
-    $(this).addClass('open');
-    $('.faq-button').eq(prevIndex).next().slideUp();
-    $('.faq_button').eq(prevIndex).removeClass('open');
+    $(this).addClass("open");
+    $(".faq-button").eq(prevIndex).next().slideUp();
+    $(".faq_button").eq(prevIndex).removeClass("open");
     prevIndex = currentIndex;
   });
 
-
-
   //слайдер
-  $('.carousel').slick();
-
+  if (".carousel") {
+    $(".carousel").slick();
+    return;
+  }
 
   //ajax
-  $('.js-btn-portfolio').on('click', function () {
-
+  $(".js-btn-portfolio").on("click", function () {
     $.ajax({
-      type: 'POST',
-      url: '../json/portfolio.json',
-      data: 'count=2',
+      type: "POST",
+      url: "../json/portfolio.json",
+      data: "count=2",
       success: function (resData) {
         let html = generateHtml(resData.portfolio);
         addToPage(html);
-
       },
       error: function () {
-        console.log('Ошибочка');
-      }
+        console.log("Ошибочка");
+      },
     });
   });
 
   function generateHtml(dataArray) {
-    let htmlString = '';
+    let htmlString = "";
 
     dataArray.forEach(function (itemArray) {
-      htmlString = htmlString + `<div class="portfolio-item">
+      htmlString =
+        htmlString +
+        `<div class="portfolio-item">
       <div class="portfolio-item" data-type="strict">
       <img src="${itemArray.imageSrc}" alt="${itemArray.imageAlt}">
       <span>${itemArray.imageText}</span>
@@ -102,10 +100,6 @@ $(document).ready(function () {
   }
 
   function addToPage(htmlString) {
-    $('.portfolio-list').append(htmlString);
+    $(".portfolio-list").append(htmlString);
   }
-
-
-
-
 });
